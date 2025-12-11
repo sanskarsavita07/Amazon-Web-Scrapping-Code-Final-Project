@@ -1,4 +1,4 @@
-# amazondatabase.py
+# amazondb.py
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
@@ -90,4 +90,4 @@ def insert_products(cursor, conn, products_list):
         print(f"{len(products_list)} products inserted successfully.")
     except Exception as e:
         print(f"Failed to insert bulk products: {e}")
-        conn.rollback() #it will rollback all process is not found database
+        conn.rollback()

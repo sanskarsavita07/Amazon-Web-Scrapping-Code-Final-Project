@@ -71,7 +71,7 @@ def scrape_page(driver, page):
     )
     print(f"Found {len(products)} products on page {page}.")
 
-    page_data = [] #it is a list
+    page_data = []
     for idx, product in enumerate(products, start=1):
         try:
             link_elem = product.find_element(By.CSS_SELECTOR, "a.a-link-normal.a-text-normal")
